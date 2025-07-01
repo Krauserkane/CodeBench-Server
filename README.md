@@ -53,7 +53,7 @@ Response
 
 ``` bash
 {
-  "submissionId": "abc123"
+  "submissionId": "8c5f4f28-76ed-49e9-bd2f-b4909c12b754"
 }
 ```
 
