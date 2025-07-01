@@ -14,3 +14,8 @@ It also provides an API to query the status or result of a previously submitted 
 - **Query Status:** Provides a `GET` API to fetch the status or result of submitted code.
 - **ID Generation:** Generates and returns a unique ID for each submission.
 
+
+## 🚀 How to Run?
+1. git clone https://github.com/Krauserkane/CodeBench-Server.git
+2. cd CodeBench
+3. docker-compose up --build
