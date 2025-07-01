@@ -56,3 +56,41 @@ Response
   "submissionId": "abc123"
 }
 ```
+
+---
+### 2️⃣ Get the Status of the Submission
+
+``` bash
+curl --location 'http://localhost:8080/getStatus?submissionId=3585b450-faf5-432f-81d8-10faaf88bb82'
+```
+
+Response
+
+```bash
+[
+    {
+        "submissionId": {
+            "submissionId": "8c5f4f28-76ed-49e9-bd2f-b4909c12b754",
+            "testCaseId": 1
+        },
+        "input": "",
+        "output": "Hello, World!\n",
+        "stdout": "Hello, World!\n",
+        "stderr": "OK (0.059 sec real, 0.175 sec wall)\n",
+        "timeTaken": 0.175,
+        "memoryTaken": 9508
+    },
+    {
+        "submissionId": {
+            "submissionId": "8c5f4f28-76ed-49e9-bd2f-b4909c12b754",
+            "testCaseId": 2
+        },
+        "input": "",
+        "output": "Hello, World!\n",
+        "stdout": "Hello, World!\n",
+        "stderr": "OK (0.022 sec real, 0.022 sec wall)\n",
+        "timeTaken": 0.022,
+        "memoryTaken": 9536
+    }
+]
+```
