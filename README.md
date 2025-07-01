@@ -19,3 +19,27 @@ It also provides an API to query the status or result of a previously submitted 
 1. git clone https://github.com/Krauserkane/CodeBench-Server.git
 2. cd CodeBench
 3. docker-compose up --build
+
+
+---
+
+## 📌 Example Usage
+
+### 1️⃣ Submit Code
+
+```bash
+curl -X POST http://localhost:8080/api/submit \
+  -H "Content-Type: application/json" \
+  -d '{
+    "language": "java",
+    "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Hello CodeBench!\"); } }"
+  }'
+```
+
+Response
+
+``` bash
+{
+  "submissionId": "abc123"
+}
+```
