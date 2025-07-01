@@ -44,3 +44,14 @@ services:
         condition: service_healthy
       kafka:
         condition: service_started
+
+  server:
+    image: krauserkane/codebench-server:latest
+    ports:
+      -  "8080:8080"
+    depends_on:
+      db:
+        condition: service_healthy
+      kafka:
+        condition: service_started
+
