@@ -28,12 +28,25 @@ It also provides an API to query the status or result of a previously submitted 
 ### 1️⃣ Submit Code
 
 ```bash
-curl -X POST http://localhost:8080/api/submit \
-  -H "Content-Type: application/json" \
-  -d '{
-    "language": "java",
-    "sourceCode": "public class Main { public static void main(String[] args) { System.out.println(\"Hello CodeBench!\"); } }"
-  }'
+curl --location 'http://localhost:8080/submit' \
+--header 'Content-Type: application/json' \
+--data '{
+    "language": "Python",
+    "code": "print(\"Hello, World!\")",
+    "testCases": [
+        {
+            "input": "",
+            "output": "Hello, World!\n",
+            "testCaseId": "1"
+        },
+        {
+            "input": "",
+            "output": "Hello, World!\n",
+            "testCaseId": "2"
+        }
+    ]
+}
+'
 ```
 
 Response
